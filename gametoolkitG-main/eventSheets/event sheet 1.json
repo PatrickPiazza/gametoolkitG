@@ -1,0 +1,176 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "coincounter",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 470943482244806
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 695566830239413,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Sprite",
+					"sid": 688784995833834,
+					"parameters": {
+						"object": "bullet",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 494225367639717
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 477632036125759,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Sprite",
+					"sid": 653770829819124,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 873482607352067
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 321701510328814,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Sprite",
+					"sid": 228454315785468,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 586545609824943
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-mirrored",
+					"objectClass": "Sprite",
+					"sid": 202511794837922
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "bullet",
+					"sid": 992188602271720,
+					"parameters": {
+						"angle": "180"
+					}
+				}
+			],
+			"sid": 155726834565947
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "bullet",
+					"sid": 985718862383816
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 232328737183567,
+					"parameters": {
+						"seconds": "0.6"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 420221409971837
+				}
+			],
+			"sid": 733457658762211
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sprite",
+					"sid": 457490921094453,
+					"parameters": {
+						"object": "Sprite2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Sprite2",
+					"sid": 598323705203279
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 105127204722655,
+					"parameters": {
+						"variable": "coincounter",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "CoinScore1",
+					"sid": 131349425965753,
+					"parameters": {
+						"text": "\"Score: \" &  coincounter"
+					}
+				}
+			],
+			"sid": 482206717454352
+		}
+	],
+	"sid": 637324966410906
+}
