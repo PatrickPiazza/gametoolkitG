@@ -27,11 +27,11 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "Sprite",
-					"sid": 688784995833834,
+					"sid": 640887521885478,
 					"parameters": {
 						"object": "bullet",
 						"layer": "1",
-						"image-point": "0",
+						"image-point": "1",
 						"create-hierarchy": false
 					}
 				}
@@ -90,48 +90,36 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "is-mirrored",
-					"objectClass": "Sprite",
-					"sid": 202511794837922
-				}
-			],
-			"actions": [
-				{
-					"id": "set-angle",
-					"objectClass": "bullet",
-					"sid": 992188602271720,
-					"parameters": {
-						"angle": "180"
-					}
-				}
-			],
-			"sid": 155726834565947
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "on-created",
 					"objectClass": "bullet",
 					"sid": 985718862383816
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 733457658762211,
+			"children": [
 				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 232328737183567,
-					"parameters": {
-						"seconds": "0.6"
-					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "bullet",
-					"sid": 420221409971837
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "Sprite",
+							"sid": 741321051750520
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "bullet",
+							"sid": 681395981070395,
+							"parameters": {
+								"angle": "180"
+							}
+						}
+					],
+					"sid": 110873282401575
 				}
-			],
-			"sid": 733457658762211
+			]
 		},
 		{
 			"eventType": "block",
@@ -170,6 +158,27 @@
 				}
 			],
 			"sid": 482206717454352
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bullet",
+					"sid": 693809680618001,
+					"parameters": {
+						"object": "TiledBackground"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 584657882143088
+				}
+			],
+			"sid": 527149680984434
 		}
 	],
 	"sid": 637324966410906
