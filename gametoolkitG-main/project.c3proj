@@ -85,26 +85,34 @@
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
 		}
 	],
 	"uniqueId": "dbskvkdcva1",
 	"objectTypes": {
 		"items": [
 			"TiledBackground",
-			"Sprite",
+			"Player",
 			"bullet",
 			"Keyboard",
 			"Sprite2",
-			"CoinScore1"
+			"CoinScore1",
+			"Enemy",
+			"block"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [
-			"coin"
-		],
+		"items": [],
 		"subfolders": []
 	},
 	"layouts": {
