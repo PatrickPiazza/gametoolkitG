@@ -102,7 +102,9 @@
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"coin"
+		],
 		"subfolders": []
 	},
 	"layouts": {

@@ -597,7 +597,8 @@
 					},
 					"uid": 19,
 					"instanceVariables": {
-						"CoinScore1": 0
+						"basicCoinScore": 1,
+						"CoinScore1": 1
 					},
 					"behaviors": {},
 					"world": {
@@ -628,7 +629,8 @@
 					},
 					"uid": 20,
 					"instanceVariables": {
-						"CoinScore1": 0
+						"basicCoinScore": 1,
+						"CoinScore1": 1
 					},
 					"behaviors": {},
 					"world": {
@@ -659,7 +661,8 @@
 					},
 					"uid": 21,
 					"instanceVariables": {
-						"CoinScore1": 0
+						"basicCoinScore": 1,
+						"CoinScore1": 1
 					},
 					"behaviors": {},
 					"world": {
@@ -690,7 +693,8 @@
 					},
 					"uid": 22,
 					"instanceVariables": {
-						"CoinScore1": 0
+						"basicCoinScore": 1,
+						"CoinScore1": 1
 					},
 					"behaviors": {},
 					"world": {
@@ -721,7 +725,8 @@
 					},
 					"uid": 23,
 					"instanceVariables": {
-						"CoinScore1": 0
+						"basicCoinScore": 1,
+						"CoinScore1": 1
 					},
 					"behaviors": {},
 					"world": {
@@ -752,7 +757,8 @@
 					},
 					"uid": 24,
 					"instanceVariables": {
-						"CoinScore1": 0
+						"basicCoinScore": 1,
+						"CoinScore1": 1
 					},
 					"behaviors": {},
 					"world": {

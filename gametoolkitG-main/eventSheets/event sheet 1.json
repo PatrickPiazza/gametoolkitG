@@ -127,25 +127,25 @@
 				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "Sprite",
-					"sid": 457490921094453,
+					"sid": 859229237846337,
 					"parameters": {
-						"object": "Sprite2"
+						"object": "coin"
 					}
 				}
 			],
 			"actions": [
 				{
 					"id": "destroy",
-					"objectClass": "Sprite2",
-					"sid": 598323705203279
+					"objectClass": "coin",
+					"sid": 282315785711468
 				},
 				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 105127204722655,
+					"sid": 915897980917751,
 					"parameters": {
 						"variable": "coincounter",
-						"value": "1"
+						"value": "coin.basicCoinScore"
 					}
 				},
 				{
