@@ -23,6 +23,22 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -53,14 +69,43 @@
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Anchor",
+			"name": "Anchor",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
 		}
 	],
 	"uniqueId": "dbskvkdcva1",
 	"objectTypes": {
 		"items": [
 			"TiledBackground",
-			"TiledBackground2",
-			"Sprite"
+			"Player",
+			"bullet",
+			"Keyboard",
+			"Sprite2",
+			"CoinScore1",
+			"Enemy",
+			"block"
 		],
 		"subfolders": []
 	},
