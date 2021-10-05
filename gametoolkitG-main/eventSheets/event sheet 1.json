@@ -34,6 +34,17 @@
 						"image-point": "0",
 						"create-hierarchy": false
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 475752112412824,
+					"parameters": {
+						"audio-file": "522280__filmmakersmanual__bullet-flyby-3",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 494225367639717
@@ -166,6 +177,17 @@
 					"sid": 131349425965753,
 					"parameters": {
 						"text": "\"Score: \" &  coincounter"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 698171056489688,
+					"parameters": {
+						"audio-file": "341695__projectsu012__coins-1",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -476,6 +498,33 @@
 					"sid": 832325583915970
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 218512724880031,
+					"parameters": {
+						"key": 38
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 275949160064072,
+					"parameters": {
+						"audio-file": "386624__jalastram__sfx-jump-30",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 888979111346681
 		}
 	],
 	"sid": 637324966410906
