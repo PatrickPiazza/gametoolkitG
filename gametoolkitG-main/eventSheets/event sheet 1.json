@@ -34,17 +34,6 @@
 						"image-point": "0",
 						"create-hierarchy": false
 					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 475752112412824,
-					"parameters": {
-						"audio-file": "522280__filmmakersmanual__bullet-flyby-3",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
 				}
 			],
 			"sid": 494225367639717
@@ -152,14 +141,14 @@
 					"objectClass": "Player",
 					"sid": 457490921094453,
 					"parameters": {
-						"object": "Sprite2"
+						"object": "coin"
 					}
 				}
 			],
 			"actions": [
 				{
 					"id": "destroy",
-					"objectClass": "Sprite2",
+					"objectClass": "coin",
 					"sid": 598323705203279
 				},
 				{
@@ -177,17 +166,6 @@
 					"sid": 131349425965753,
 					"parameters": {
 						"text": "\"Score: \" &  coincounter"
-					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 698171056489688,
-					"parameters": {
-						"audio-file": "341695__projectsu012__coins-1",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -503,28 +481,35 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 218512724880031,
+					"id": "on-collision-with-another-object",
+					"objectClass": "Enemy",
+					"sid": 247886401126148,
 					"parameters": {
-						"key": 38
+						"object": "Player"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 275949160064072,
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 784379581493401
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 692712033608096,
 					"parameters": {
-						"audio-file": "386624__jalastram__sfx-jump-30",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
+						"seconds": "2.5"
 					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 680236396543924
 				}
 			],
-			"sid": 888979111346681
+			"sid": 261485096569201
 		}
 	],
 	"sid": 637324966410906

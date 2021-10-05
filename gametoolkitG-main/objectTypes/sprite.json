@@ -1,52 +1,49 @@
 {
 	"name": "Sprite",
 	"plugin-id": "Sprite",
-	"sid": 711639092799860,
+	"sid": 610444167594198,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "scrollto",
-			"name": "ScrollTo",
-			"sid": 359971865818712
-		},
-		{
-			"behaviorId": "Platform",
-			"name": "Platform",
-			"sid": 440808160681278
-		},
-		{
-			"behaviorId": "MoveTo",
-			"name": "MoveTo",
-			"sid": 295012342359205
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 620,
+						"height": 349,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4183565,
+						"imageSpriteId": 4396320,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								0.5,
+								0,
+								0.9983870967741936,
+								0,
+								0.9983870967741936,
+								0.5,
+								0.9983870967741936,
+								0.997134670487106,
+								0.5,
+								0.997134670487106,
+								0,
+								0.997134670487106,
+								0,
+								0.5
+							]
+						},
 						"useCollisionPoly": true,
-						"imagePoints": [
-							{
-								"name": "Image Point 1",
-								"x": 0.984,
-								"y": 0.448
-							}
-						],
 						"duration": 1
 					}
 				],
-				"sid": 439838638883834,
+				"sid": 900284241698358,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

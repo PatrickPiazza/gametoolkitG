@@ -39,14 +39,6 @@
 			"bundled": false
 		},
 		{
-			"type": "plugin",
-			"id": "Audio",
-			"name": "Audio",
-			"author": "Scirra",
-			"version": "r260",
-			"bundled": false
-		},
-		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -106,15 +98,15 @@
 	"uniqueId": "dbskvkdcva1",
 	"objectTypes": {
 		"items": [
-			"TiledBackground",
+			"platforms",
 			"Player",
 			"bullet",
 			"Keyboard",
-			"Sprite2",
+			"coin",
 			"CoinScore1",
 			"Enemy",
 			"block",
-			"Audio"
+			"Sprite"
 		],
 		"subfolders": []
 	},
@@ -142,23 +134,7 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [
-				{
-					"name": "386624__jalastram__sfx-jump-30.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 471298754485832
-				},
-				{
-					"name": "522280__filmmakersmanual__bullet-flyby-3.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 506907719593126
-				},
-				{
-					"name": "341695__projectsu012__coins-1.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 469692988553240
-				}
-			],
+			"items": [],
 			"subfolders": []
 		},
 		"music": {
