@@ -1,0 +1,18 @@
+{
+	"name": "pickups",
+	"plugin-id": "Sprite",
+	"sid": 229355195041842,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 805530053673561
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"bulletpickup",
+		"coin"
+	]
+}

@@ -39,6 +39,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -93,6 +101,14 @@
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
 		}
 	],
 	"uniqueId": "dbskvkdcva1",
@@ -105,18 +121,24 @@
 			"coin",
 			"CoinScore1",
 			"Enemy",
-			"block",
-			"Sprite",
+			"bg",
 			"healthbar",
-			"Sprite2",
-			"Sprite3"
+			"Spikes",
+			"Sprite3",
+			"bulletpickup",
+			"ammocount",
+			"playerdeath",
+			"enemydeathSlimes",
+			"Sprite"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"pickups"
+		],
 		"subfolders": []
 	},
 	"layouts": {
