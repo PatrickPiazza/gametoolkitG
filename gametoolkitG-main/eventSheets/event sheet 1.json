@@ -6,7 +6,7 @@
 			"name": "Ammo",
 			"type": "number",
 			"initialValue": "5",
-			"comment": "",
+			"comment": "player ammo count. if 0 or lower, player's shots are more melee range",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 623315271515767
@@ -16,7 +16,7 @@
 			"name": "coincounter",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "",
+			"comment": "self explanatory ",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 470943482244806
