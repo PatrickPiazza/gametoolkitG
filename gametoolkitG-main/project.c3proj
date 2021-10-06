@@ -106,16 +106,17 @@
 			"CoinScore1",
 			"Enemy",
 			"block",
-			"Sprite"
+			"Sprite",
+			"healthbar",
+			"Sprite2",
+			"Sprite3"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [
-			"coins"
-		],
+		"items": [],
 		"subfolders": []
 	},
 	"layouts": {

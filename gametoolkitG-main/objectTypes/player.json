@@ -3,7 +3,14 @@
 	"plugin-id": "Sprite",
 	"sid": 711639092799860,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "health",
+			"type": "number",
+			"desc": "",
+			"sid": 199030553460112
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "scrollto",

@@ -1,7 +1,7 @@
 {
-	"name": "Sprite2",
+	"name": "Sprite3",
 	"plugin-id": "Sprite",
-	"sid": 587712210008083,
+	"sid": 912764983277713,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -18,17 +18,17 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1316062,
+						"imageSpriteId": 5004442,
 						"collisionPoly": {
 							"points": [
-								0.09400000000000003,
-								0.3720000000000001,
-								0.8339999999999999,
-								0.354,
-								0.6539999999999997,
-								0.6979999999999997,
-								0.3000000000000001,
-								0.7059999999999997
+								0.06999999999999999,
+								0.3440000000000001,
+								0.9179999999999999,
+								0.23000000000000004,
+								0.96,
+								0.7839999999999998,
+								0.032,
+								0.8599999999999999
 							]
 						},
 						"useCollisionPoly": true,
@@ -42,18 +42,18 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1524428,
+						"imageSpriteId": 4536913,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 763591499449253,
+				"sid": 409427611922574,
 				"name": "Animation 1",
 				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 2
+				"speed": 3
 			}
 		],
 		"subfolders": []
