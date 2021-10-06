@@ -90,48 +90,36 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "is-mirrored",
-					"objectClass": "Player",
-					"sid": 202511794837922
-				}
-			],
-			"actions": [
-				{
-					"id": "set-angle",
-					"objectClass": "bullet",
-					"sid": 992188602271720,
-					"parameters": {
-						"angle": "180"
-					}
-				}
-			],
-			"sid": 155726834565947
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "on-created",
 					"objectClass": "bullet",
 					"sid": 985718862383816
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 733457658762211,
+			"children": [
 				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 232328737183567,
-					"parameters": {
-						"seconds": "0.6"
-					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "bullet",
-					"sid": 420221409971837
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "Player",
+							"sid": 411229010632435
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "bullet",
+							"sid": 810732147368731,
+							"parameters": {
+								"angle": "180"
+							}
+						}
+					],
+					"sid": 579349464531500
 				}
-			],
-			"sid": 733457658762211
+			]
 		},
 		{
 			"eventType": "block",
@@ -139,25 +127,25 @@
 				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "Player",
-					"sid": 457490921094453,
+					"sid": 657649649646375,
 					"parameters": {
-						"object": "coin"
+						"object": "coins"
 					}
 				}
 			],
 			"actions": [
 				{
 					"id": "destroy",
-					"objectClass": "coin",
-					"sid": 598323705203279
+					"objectClass": "coins",
+					"sid": 689172798969148
 				},
 				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 105127204722655,
+					"sid": 824173381380923,
 					"parameters": {
 						"variable": "coincounter",
-						"value": "1"
+						"value": "coin.coinValue"
 					}
 				},
 				{
@@ -170,6 +158,27 @@
 				}
 			],
 			"sid": 482206717454352
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bullet",
+					"sid": 633029547725954,
+					"parameters": {
+						"object": "platforms"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 262833011377058
+				}
+			],
+			"sid": 477752943349165
 		},
 		{
 			"eventType": "group",
@@ -337,6 +346,11 @@
 					"id": "destroy",
 					"objectClass": "Enemy",
 					"sid": 498604265291370
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 874516493421778
 				}
 			],
 			"sid": 190049642683668
@@ -368,9 +382,9 @@
 				{
 					"id": "set-mirrored",
 					"objectClass": "Enemy",
-					"sid": 440456264895935,
+					"sid": 595288781259972,
 					"parameters": {
-						"state": "not-mirrored"
+						"state": "mirrored"
 					}
 				}
 			],
@@ -403,9 +417,9 @@
 				{
 					"id": "set-mirrored",
 					"objectClass": "Enemy",
-					"sid": 786979718983104,
+					"sid": 423512748659081,
 					"parameters": {
-						"state": "mirrored"
+						"state": "not-mirrored"
 					}
 				}
 			],

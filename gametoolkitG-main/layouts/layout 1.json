@@ -617,6 +617,7 @@
 					},
 					"uid": 19,
 					"instanceVariables": {
+						"coinValue": 1,
 						"CoinScore1": 0
 					},
 					"behaviors": {},
@@ -648,6 +649,7 @@
 					},
 					"uid": 20,
 					"instanceVariables": {
+						"coinValue": 1,
 						"CoinScore1": 0
 					},
 					"behaviors": {},
@@ -679,6 +681,7 @@
 					},
 					"uid": 21,
 					"instanceVariables": {
+						"coinValue": 1,
 						"CoinScore1": 0
 					},
 					"behaviors": {},
@@ -710,6 +713,7 @@
 					},
 					"uid": 22,
 					"instanceVariables": {
+						"coinValue": 1,
 						"CoinScore1": 0
 					},
 					"behaviors": {},
@@ -741,6 +745,7 @@
 					},
 					"uid": 23,
 					"instanceVariables": {
+						"coinValue": 1,
 						"CoinScore1": 0
 					},
 					"behaviors": {},
@@ -772,6 +777,7 @@
 					},
 					"uid": 24,
 					"instanceVariables": {
+						"coinValue": 1,
 						"CoinScore1": 0
 					},
 					"behaviors": {},
@@ -1284,8 +1290,8 @@
 						}
 					},
 					"world": {
-						"x": 339,
-						"y": 343,
+						"x": 354.9151363949533,
+						"y": 345.1817614810749,
 						"width": -12,
 						"height": 55,
 						"originX": 0,
@@ -1644,10 +1650,10 @@
 						}
 					},
 					"world": {
-						"x": 35,
-						"y": 120,
+						"x": 33.56364770378501,
+						"y": 95.41297080625748,
 						"width": -12,
-						"height": 26,
+						"height": 59.683927069770746,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -1831,6 +1837,7 @@
 					},
 					"uid": 31,
 					"instanceVariables": {
+						"coinValue": 1,
 						"CoinScore1": 0
 					},
 					"behaviors": {},
