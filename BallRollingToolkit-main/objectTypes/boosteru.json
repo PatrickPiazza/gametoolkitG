@@ -1,0 +1,57 @@
+{
+	"name": "BoosterU",
+	"plugin-id": "Sprite",
+	"sid": 547292269055529,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 438,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4249608,
+						"collisionPoly": {
+							"points": [
+								0.5,
+								1,
+								0.0022831050228310223,
+								1,
+								0.0022831050228310223,
+								0.5,
+								0.0022831050228310223,
+								0.0016666666666667052,
+								0.5,
+								0.0016666666666667052,
+								1,
+								0.0016666666666667052,
+								1,
+								0.5,
+								1,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 574218326693414,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

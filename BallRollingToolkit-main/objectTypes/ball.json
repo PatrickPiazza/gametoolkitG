@@ -1,0 +1,76 @@
+{
+	"name": "Ball",
+	"plugin-id": "Sprite",
+	"sid": 106600727468354,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "fellOut",
+			"type": "boolean",
+			"desc": "",
+			"sid": 357590687631429
+		},
+		{
+			"name": "reachedGoal",
+			"type": "boolean",
+			"desc": "",
+			"sid": 458463448251625
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 231831293957294
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 99,
+						"height": 100,
+						"originX": 0.5050505050505051,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9187420,
+						"collisionPoly": {
+							"points": [
+								0.16161616161616163,
+								0.16,
+								0.5050505050505051,
+								0.01,
+								0.8383838383838383,
+								0.16,
+								0.9797979797979798,
+								0.5,
+								0.8383838383838383,
+								0.83,
+								0.5050505050505051,
+								0.98,
+								0.16161616161616163,
+								0.83,
+								0.020202020202020204,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 560779492112229,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

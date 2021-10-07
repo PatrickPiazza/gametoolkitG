@@ -1,0 +1,19 @@
+{
+	"name": "BoosterUD",
+	"plugin-id": "Sprite",
+	"sid": 886512402172841,
+	"instanceVariables": [
+		{
+			"name": "Direction",
+			"type": "number",
+			"desc": "",
+			"sid": 916572601026314
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"BoosterU",
+		"BoosterD"
+	]
+}

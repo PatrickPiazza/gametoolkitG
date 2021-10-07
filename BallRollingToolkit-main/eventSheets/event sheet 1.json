@@ -1,0 +1,877 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "TimeLimit",
+			"type": "number",
+			"initialValue": "30",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 662086445635640
+		},
+		{
+			"eventType": "variable",
+			"name": "Coins",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 287812471706271
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 755204035123450
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 283795663055267,
+					"parameters": {
+						"text": "\"\""
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Ball",
+					"sid": 678067567894483,
+					"parameters": {
+						"instance-variable": "fellOut",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Ball",
+					"sid": 554842370352906,
+					"parameters": {
+						"instance-variable": "reachedGoal",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 228465632438952,
+					"parameters": {
+						"variable": "TimeLimit",
+						"value": "30"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "TimeLimit",
+					"sid": 693455332537624,
+					"parameters": {
+						"text": "\"Time: \" & TimeLimit"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 481521265717293,
+					"parameters": {
+						"variable": "Coins",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Coins",
+					"sid": 852073121604593,
+					"parameters": {
+						"instance-variable": "PerfectAmount",
+						"value": "Coins.Count"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Coinstext",
+					"sid": 336118014637583,
+					"parameters": {
+						"text": "\"Coins :  \" & Coins & \" / \" & Coins.PerfectAmount"
+					}
+				}
+			],
+			"sid": 187074413518792
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 228585936624088,
+					"parameters": {
+						"interval-seconds": "0.01"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 244381483458021,
+					"parameters": {
+						"variable": "TimeLimit",
+						"comparison": 4,
+						"value": "0.00"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Ball",
+					"sid": 322057721141661,
+					"parameters": {
+						"instance-variable": "fellOut"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Ball",
+					"sid": 295175763782553,
+					"parameters": {
+						"instance-variable": "reachedGoal"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 668572526530163,
+					"parameters": {
+						"variable": "TimeLimit",
+						"value": "0.01"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "TimeLimit",
+					"sid": 967286825282998,
+					"parameters": {
+						"text": "\"Time: \" & TimeLimit"
+					}
+				}
+			],
+			"sid": 238530325182905
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 995642211086740,
+					"parameters": {
+						"key": 39
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 497720100231233,
+					"parameters": {
+						"key": 37
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Ball",
+					"sid": 262009785102689,
+					"parameters": {
+						"instance-variable": "fellOut"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Ball",
+					"sid": 971402862715389,
+					"parameters": {
+						"instance-variable": "reachedGoal"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "apply-force",
+					"objectClass": "Ball",
+					"sid": 890010426021667,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force-x": "5",
+						"force-y": "0",
+						"image-point": "0"
+					}
+				}
+			],
+			"sid": 966052164926688
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 515800462469519,
+					"parameters": {
+						"key": 37
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 443996008292971,
+					"parameters": {
+						"key": 39
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Ball",
+					"sid": 534774063951188,
+					"parameters": {
+						"instance-variable": "fellOut"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Ball",
+					"sid": 874932247943317,
+					"parameters": {
+						"instance-variable": "reachedGoal"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "apply-force",
+					"objectClass": "Ball",
+					"sid": 908148686218629,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force-x": "-5",
+						"force-y": "0",
+						"image-point": "0"
+					}
+				}
+			],
+			"sid": 808032174828707
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "Ball",
+					"sid": 395320872745022,
+					"parameters": {
+						"comparison": 5,
+						"y-co-ordinate": "509.841473"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Ball",
+					"sid": 865377911812067,
+					"parameters": {
+						"instance-variable": "fellOut",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 630527163965410,
+					"parameters": {
+						"text": "\"FALL OUT\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 202624615269069,
+					"parameters": {
+						"seconds": "2.0"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 698522577502590
+				}
+			],
+			"sid": 832716074618477
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Ball",
+					"sid": 668177272094996,
+					"parameters": {
+						"object": "lava"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Ball",
+					"sid": 593987668751248
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Ball",
+					"sid": 648954924587729,
+					"parameters": {
+						"instance-variable": "fellOut",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 734292435478335,
+					"parameters": {
+						"text": "\"FALL OUT\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 911881671402838,
+					"parameters": {
+						"seconds": "2.0"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 313435626266622
+				}
+			],
+			"sid": 852781808877663
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Ball",
+					"sid": 664455994616804,
+					"parameters": {
+						"object": "Shuriken"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Ball",
+					"sid": 301222856916616
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Ball",
+					"sid": 905759436069090,
+					"parameters": {
+						"instance-variable": "fellOut",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 159244576628402,
+					"parameters": {
+						"text": "\"HIT\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 672294098512411,
+					"parameters": {
+						"seconds": "2.0"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 983466415047611
+				}
+			],
+			"sid": 272052640323378
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 410091946186621,
+					"parameters": {
+						"variable": "TimeLimit",
+						"comparison": 3,
+						"value": "0.00"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Ball",
+					"sid": 435802657060625,
+					"parameters": {
+						"instance-variable": "fellOut",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-velocity",
+					"objectClass": "Ball",
+					"sid": 268156567259193,
+					"behaviorType": "Physics",
+					"parameters": {
+						"x-component": "0",
+						"y-component": "0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "TimeLimit",
+					"sid": 716575745519403,
+					"parameters": {
+						"text": "\"Time: 0.00\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 319683482608880,
+					"parameters": {
+						"text": "\"TIME OVER\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 826282608121695,
+					"parameters": {
+						"seconds": "2.0"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 285002551462367
+				}
+			],
+			"sid": 312498752870407
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Ball",
+					"sid": 949790539751948,
+					"parameters": {
+						"object": "goal"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 594867617612172,
+					"parameters": {
+						"variable": "Coins",
+						"comparison": 2,
+						"value": "Coins.PerfectAmount"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Ball",
+					"sid": 523293224980774,
+					"parameters": {
+						"instance-variable": "reachedGoal",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 959635697924306,
+					"parameters": {
+						"text": "\"GOAL!!\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 941901804690777,
+					"parameters": {
+						"seconds": "2.0"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 721413068903651
+				}
+			],
+			"sid": 964298048848558
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Ball",
+					"sid": 609036048582263,
+					"parameters": {
+						"object": "goal"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 925147392983125,
+					"parameters": {
+						"variable": "Coins",
+						"comparison": 5,
+						"value": "Coins.PerfectAmount"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Ball",
+					"sid": 956063758694071,
+					"parameters": {
+						"instance-variable": "reachedGoal",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 557411161904556,
+					"parameters": {
+						"text": "\"PERFECT!!\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 856725619004034,
+					"parameters": {
+						"seconds": "2.0"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 397682804264357
+				}
+			],
+			"sid": 476507880449522
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Ball",
+					"sid": 398778483233537,
+					"parameters": {
+						"instance-variable": "reachedGoal"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "apply-force",
+					"objectClass": "Ball",
+					"sid": 131468399497645,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force-x": "0",
+						"force-y": "-20",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Platform",
+					"sid": 822174991528045,
+					"behaviorType": "Physics",
+					"parameters": {
+						"mode": "disabled"
+					}
+				}
+			],
+			"sid": 573725089823396
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Ball",
+					"sid": 426971612953327,
+					"parameters": {
+						"object": "BoostersLR"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Ball",
+					"sid": 122193433078538,
+					"parameters": {
+						"instance-variable": "reachedGoal"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "apply-force",
+					"objectClass": "Ball",
+					"sid": 204766243113764,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force-x": "BoostersLR.Direction",
+						"force-y": "0",
+						"image-point": "0"
+					}
+				}
+			],
+			"sid": 695059489603624
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Ball",
+					"sid": 691115716787544,
+					"parameters": {
+						"object": "BoosterD"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Ball",
+					"sid": 750217900262991,
+					"parameters": {
+						"instance-variable": "reachedGoal"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "apply-force",
+					"objectClass": "Ball",
+					"sid": 332626092688322,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force-x": "0",
+						"force-y": "100",
+						"image-point": "0"
+					}
+				}
+			],
+			"sid": 820109408582997
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Shuriken",
+					"sid": 202161973490385,
+					"parameters": {
+						"object": "BoostersLR"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "apply-force",
+					"objectClass": "Shuriken",
+					"sid": 388186212842535,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force-x": "BoostersLR.Direction",
+						"force-y": "0",
+						"image-point": "0"
+					}
+				}
+			],
+			"sid": 420336017646695
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Shuriken",
+					"sid": 629851732953915,
+					"parameters": {
+						"object": "BoosterD"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "apply-force",
+					"objectClass": "Shuriken",
+					"sid": 667055678808691,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force-x": "0",
+						"force-y": "2500",
+						"image-point": "0"
+					}
+				}
+			],
+			"sid": 409743059433717
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Ball",
+					"sid": 624981117202839,
+					"parameters": {
+						"object": "BouncePad"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Ball",
+					"sid": 186385093293678,
+					"parameters": {
+						"instance-variable": "reachedGoal"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "apply-force",
+					"objectClass": "Ball",
+					"sid": 900731768906940,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force-x": "-(Ball.Physics.VelocityX)*100",
+						"force-y": "-(Ball.Physics.VelocityY)*100",
+						"image-point": "0"
+					}
+				}
+			],
+			"sid": 871956285361917
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Shuriken",
+					"sid": 486857180295671,
+					"parameters": {
+						"object": "BouncePad"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "apply-force",
+					"objectClass": "Shuriken",
+					"sid": 608533108916676,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force-x": "-(Shuriken.Physics.VelocityX)*100",
+						"force-y": "-(Shuriken.Physics.VelocityY)*100",
+						"image-point": "0"
+					}
+				}
+			],
+			"sid": 440996286301850
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Collectables",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Ball",
+							"sid": 618533432548941,
+							"parameters": {
+								"object": "Coins"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 718561709624555,
+							"parameters": {
+								"variable": "Coins",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Coinstext",
+							"sid": 478489421753316,
+							"parameters": {
+								"text": "\"Coins :  \" & Coins & \" / \" & Coins.PerfectAmount"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Coins",
+							"sid": 713510438280814
+						}
+					],
+					"sid": 620080746194832
+				}
+			],
+			"sid": 506997660983027
+		}
+	],
+	"sid": 821615111451167
+}

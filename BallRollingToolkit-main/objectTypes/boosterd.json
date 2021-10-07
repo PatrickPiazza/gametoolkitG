@@ -1,0 +1,57 @@
+{
+	"name": "BoosterD",
+	"plugin-id": "Sprite",
+	"sid": 154713653412072,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 438,
+						"height": 600,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4519570,
+						"collisionPoly": {
+							"points": [
+								1,
+								0,
+								1,
+								0.5,
+								1,
+								0.9983333333333333,
+								0.5,
+								0.9983333333333333,
+								0.0022831050228310223,
+								0.9983333333333333,
+								0.0022831050228310223,
+								0.5,
+								0.0022831050228310223,
+								0,
+								0.5,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 454050044844244,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

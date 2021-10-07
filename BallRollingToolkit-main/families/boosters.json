@@ -1,0 +1,19 @@
+{
+	"name": "Boosters",
+	"plugin-id": "Sprite",
+	"sid": 431137642909685,
+	"instanceVariables": [
+		{
+			"name": "Direction",
+			"type": "number",
+			"desc": "",
+			"sid": 383568722112079
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"BoosterR",
+		"BoosterL"
+	]
+}
