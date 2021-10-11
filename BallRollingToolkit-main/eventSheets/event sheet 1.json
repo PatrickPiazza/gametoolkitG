@@ -5,7 +5,7 @@
 			"eventType": "variable",
 			"name": "TimeLimit",
 			"type": "number",
-			"initialValue": "30",
+			"initialValue": "90",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -641,7 +641,7 @@
 				{
 					"id": "is-overlapping-another-object",
 					"objectClass": "Ball",
-					"sid": 426971612953327,
+					"sid": 808008142171219,
 					"parameters": {
 						"object": "BoostersLR"
 					}
@@ -649,7 +649,7 @@
 				{
 					"id": "is-boolean-instance-variable-set",
 					"objectClass": "Ball",
-					"sid": 122193433078538,
+					"sid": 429871680669644,
 					"parameters": {
 						"instance-variable": "reachedGoal"
 					},
@@ -660,7 +660,7 @@
 				{
 					"id": "apply-force",
 					"objectClass": "Ball",
-					"sid": 204766243113764,
+					"sid": 972558838351017,
 					"behaviorType": "Physics",
 					"parameters": {
 						"force-x": "BoostersLR.Direction",
@@ -669,7 +669,7 @@
 					}
 				}
 			],
-			"sid": 695059489603624
+			"sid": 999608080036077
 		},
 		{
 			"eventType": "block",
@@ -871,6 +871,64 @@
 				}
 			],
 			"sid": 506997660983027
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Ball",
+					"sid": 130850998135178,
+					"parameters": {
+						"object": "lava2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Ball",
+					"sid": 594688685916968
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Ball",
+					"sid": 784988621226770,
+					"parameters": {
+						"instance-variable": "fellOut",
+						"value": "true"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 624205073687937,
+					"parameters": {
+						"seconds": "2.0"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 727449443395125
+				}
+			],
+			"sid": 190022077341597
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Ball",
+					"sid": 593501774568638,
+					"parameters": {
+						"object": "Platform2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 246592878558459
 		}
 	],
 	"sid": 821615111451167

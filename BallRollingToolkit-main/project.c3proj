@@ -45,6 +45,22 @@
 			"author": "Scirra",
 			"version": "r260",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
 		}
 	],
 	"uniqueId": "h7wm4ux11kh",
@@ -61,7 +77,9 @@
 			"Shuriken",
 			"BouncePad",
 			"lava",
-			"Coinstext"
+			"Coinstext",
+			"lava2",
+			"Platform2"
 		],
 		"subfolders": [
 			{
@@ -92,7 +110,8 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Layout 1",
+			"Layout 2"
 		],
 		"subfolders": []
 	},

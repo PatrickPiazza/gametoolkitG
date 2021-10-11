@@ -22,6 +22,11 @@
 			"behaviorId": "Physics",
 			"name": "Physics",
 			"sid": 231831293957294
+		},
+		{
+			"behaviorId": "scrollto",
+			"name": "ScrollTo",
+			"sid": 851007489699359
 		}
 	],
 	"effectTypes": [],
