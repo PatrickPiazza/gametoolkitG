@@ -22,6 +22,36 @@
 			"sid": 470943482244806
 		},
 		{
+			"eventType": "variable",
+			"name": "EnemiesRemaining",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 410344690851327
+		},
+		{
+			"eventType": "variable",
+			"name": "PerfectCoinCount",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 415136336652161
+		},
+		{
+			"eventType": "variable",
+			"name": "Pickupamount",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 101841587817548
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -39,20 +69,52 @@
 					"parameters": {
 						"cycle-position": "(Self.X % 128)/128"
 					}
-				}
-			],
-			"sid": 571677459351833
-		},
-		{
-			"eventType": "block",
-			"conditions": [
+				},
 				{
-					"id": "every-tick",
+					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 853942744341173
-				}
-			],
-			"actions": [
+					"sid": 508991520071766,
+					"parameters": {
+						"variable": "EnemiesRemaining",
+						"value": "Enemy.Count"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 946305700216782,
+					"parameters": {
+						"variable": "PerfectCoinCount",
+						"value": "coin.Count"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 373548348339296,
+					"parameters": {
+						"variable": "Ammo",
+						"value": "5"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 958050793347982,
+					"parameters": {
+						"variable": "coincounter",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 216091606258172,
+					"parameters": {
+						"variable": "Pickupamount",
+						"value": "bulletpickup.Count"
+					}
+				},
 				{
 					"id": "set-text",
 					"objectClass": "ammocount",
@@ -60,9 +122,33 @@
 					"parameters": {
 						"text": "\"Ammo Left: \"& Ammo"
 					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "EnemiesRemainText",
+					"sid": 255858490101955,
+					"parameters": {
+						"text": "\"Enemies Remaining: \" & EnemiesRemaining"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "CoinScore1",
+					"sid": 790321419576809,
+					"parameters": {
+						"text": "\"Coins: \" &  coincounter & \" / \" & PerfectCoinCount"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 128907838764048,
+					"parameters": {
+						"text": "\"\""
+					}
 				}
 			],
-			"sid": 484974130803796
+			"sid": 571677459351833
 		},
 		{
 			"eventType": "block",
@@ -78,12 +164,13 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 243312787771696,
+					"sid": 226616663478109,
 					"parameters": {
 						"variable": "Ammo",
-						"comparison": 4,
+						"comparison": 3,
 						"value": "0"
-					}
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -97,15 +184,6 @@
 						"image-point": "0",
 						"create-hierarchy": false
 					}
-				},
-				{
-					"id": "subtract-from-eventvar",
-					"objectClass": "System",
-					"sid": 853203044815129,
-					"parameters": {
-						"variable": "Ammo",
-						"value": "1"
-					}
 				}
 			],
 			"sid": 494225367639717
@@ -116,7 +194,7 @@
 				{
 					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
-					"sid": 989767212268060,
+					"sid": 514269144980851,
 					"parameters": {
 						"key": 32
 					}
@@ -124,41 +202,39 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 408168060662280,
+					"sid": 420472979304059,
 					"parameters": {
 						"variable": "Ammo",
-						"comparison": 3,
+						"comparison": 2,
+						"value": "EnemiesRemaining"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 121649286610305,
+					"parameters": {
+						"variable": "Pickupamount",
+						"comparison": 0,
 						"value": "0"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "spawn-another-object",
-					"objectClass": "Player",
-					"sid": 857403147637983,
-					"parameters": {
-						"object": "bullet",
-						"layer": "1",
-						"image-point": "0",
-						"create-hierarchy": false
-					}
+					"callFunction": "dying",
+					"sid": 621721795104099
 				},
 				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 353388701815418,
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 384330572934253,
 					"parameters": {
-						"seconds": "0.2"
+						"text": "\"Insufficient ammo!\""
 					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "bullet",
-					"sid": 756288215144432
 				}
 			],
-			"sid": 177968349026446
+			"sid": 175512336805319
 		},
 		{
 			"eventType": "block",
@@ -273,9 +349,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "CoinScore1",
-					"sid": 131349425965753,
+					"sid": 737703254099789,
 					"parameters": {
-						"text": "\"Score: \" &  coincounter"
+						"text": "\"Coins: \" &  coincounter & \" / \" & PerfectCoinCount"
 					}
 				}
 			],
@@ -298,6 +374,23 @@
 					"id": "destroy",
 					"objectClass": "bullet",
 					"sid": 115339140893493
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 853203044815129,
+					"parameters": {
+						"variable": "Ammo",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "ammocount",
+					"sid": 792935663601989,
+					"parameters": {
+						"text": "\"Ammo Left: \"& Ammo"
+					}
 				}
 			],
 			"sid": 585979994756613,
@@ -317,6 +410,11 @@
 			],
 			"actions": [
 				{
+					"id": "destroy",
+					"objectClass": "bulletpickup",
+					"sid": 666488824408125
+				},
+				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
 					"sid": 128987212690991,
@@ -326,9 +424,21 @@
 					}
 				},
 				{
-					"id": "destroy",
-					"objectClass": "bulletpickup",
-					"sid": 426767783906010
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 500206028164034,
+					"parameters": {
+						"variable": "Pickupamount",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "ammocount",
+					"sid": 811798070086112,
+					"parameters": {
+						"text": "\"Ammo Left: \"& Ammo"
+					}
 				}
 			],
 			"sid": 321010184866163
@@ -492,6 +602,17 @@
 					"parameters": {
 						"object": "Enemy"
 					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 106540038486592,
+					"parameters": {
+						"variable": "EnemiesRemaining",
+						"comparison": 3,
+						"value": "1"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -515,9 +636,267 @@
 					"id": "destroy",
 					"objectClass": "bullet",
 					"sid": 816123539087815
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 853203044815129,
+					"parameters": {
+						"variable": "Ammo",
+						"value": "1"
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 162529737099959,
+					"parameters": {
+						"variable": "EnemiesRemaining",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "ammocount",
+					"sid": 792935663601989,
+					"parameters": {
+						"text": "\"Ammo Left: \"& Ammo"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "EnemiesRemainText",
+					"sid": 566647104286515,
+					"parameters": {
+						"text": "\"Enemies Remaining: \" & EnemiesRemaining"
+					}
 				}
 			],
 			"sid": 190049642683668
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bullet",
+					"sid": 584934696532780,
+					"parameters": {
+						"object": "Enemy"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 146339000038512,
+					"parameters": {
+						"variable": "EnemiesRemaining",
+						"comparison": 3,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 281592999216931,
+					"parameters": {
+						"variable": "coincounter",
+						"comparison": 2,
+						"value": "PerfectCoinCount"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Enemy",
+					"sid": 617760834489748,
+					"parameters": {
+						"object": "enemydeathSlimes",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Enemy",
+					"sid": 910053826688160
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 202620001939815
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 820093157703432,
+					"parameters": {
+						"variable": "Ammo",
+						"value": "1"
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 702608023435251,
+					"parameters": {
+						"variable": "EnemiesRemaining",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "ammocount",
+					"sid": 455688605216420,
+					"parameters": {
+						"text": "\"Ammo Left: \"& Ammo"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "EnemiesRemainText",
+					"sid": 687145277531141,
+					"parameters": {
+						"text": "\"Enemies Remaining: \" & EnemiesRemaining"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 273043594805091,
+					"parameters": {
+						"text": "\"Clear!\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 147942243139661,
+					"parameters": {
+						"seconds": "2.0"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 794385395575841
+				}
+			],
+			"sid": 556894048158751
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bullet",
+					"sid": 822621946808887,
+					"parameters": {
+						"object": "Enemy"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 995233423016570,
+					"parameters": {
+						"variable": "EnemiesRemaining",
+						"comparison": 3,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 597597634118787,
+					"parameters": {
+						"variable": "coincounter",
+						"comparison": 5,
+						"value": "PerfectCoinCount"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Enemy",
+					"sid": 675758069746820,
+					"parameters": {
+						"object": "enemydeathSlimes",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Enemy",
+					"sid": 101299711595565
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 276986645221626
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 545393338182083,
+					"parameters": {
+						"variable": "Ammo",
+						"value": "1"
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 958792075539136,
+					"parameters": {
+						"variable": "EnemiesRemaining",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "ammocount",
+					"sid": 398071818761725,
+					"parameters": {
+						"text": "\"Ammo Left: \"& Ammo"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "EnemiesRemainText",
+					"sid": 878227768154555,
+					"parameters": {
+						"text": "\"Enemies Remaining: \" & EnemiesRemaining"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 347832891675964,
+					"parameters": {
+						"text": "\"Perfect!!\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 306008849402962,
+					"parameters": {
+						"seconds": "2.0"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 971454688135117
+				}
+			],
+			"sid": 950202275497070
 		},
 		{
 			"eventType": "block",
@@ -771,24 +1150,6 @@
 					"id": "restart-layout",
 					"objectClass": "System",
 					"sid": 733484159315520
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 373548348339296,
-					"parameters": {
-						"variable": "Ammo",
-						"value": "5"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 958050793347982,
-					"parameters": {
-						"variable": "coincounter",
-						"value": "0"
-					}
 				}
 			],
 			"sid": 520908753011820

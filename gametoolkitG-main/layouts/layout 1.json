@@ -191,9 +191,9 @@
 						}
 					},
 					"world": {
-						"x": 26.995013586011186,
-						"y": 400.99256048437536,
-						"width": 327.9809041017578,
+						"x": -1.818261987669338,
+						"y": 401.06413171691605,
+						"width": 356.7942685655996,
 						"height": 23.019359616907185,
 						"originX": 0,
 						"originY": 0,
@@ -844,7 +844,7 @@
 					"behaviors": {
 						"Platform": {
 							"properties": {
-								"max-speed": 180,
+								"max-speed": 90,
 								"acceleration": 1500,
 								"deceleration": 1500,
 								"jump-strength": 650,
@@ -900,7 +900,7 @@
 					"behaviors": {
 						"Platform": {
 							"properties": {
-								"max-speed": 180,
+								"max-speed": 90,
 								"acceleration": 1500,
 								"deceleration": 1500,
 								"jump-strength": 650,
@@ -956,7 +956,7 @@
 					"behaviors": {
 						"Platform": {
 							"properties": {
-								"max-speed": 180,
+								"max-speed": 90,
 								"acceleration": 1500,
 								"deceleration": 1500,
 								"jump-strength": 650,
@@ -1012,7 +1012,7 @@
 					"behaviors": {
 						"Platform": {
 							"properties": {
-								"max-speed": 180,
+								"max-speed": 90,
 								"acceleration": 1500,
 								"deceleration": 1500,
 								"jump-strength": 650,
@@ -1068,7 +1068,7 @@
 					"behaviors": {
 						"Platform": {
 							"properties": {
-								"max-speed": 180,
+								"max-speed": 90,
 								"acceleration": 1500,
 								"deceleration": 1500,
 								"jump-strength": 650,
@@ -1124,7 +1124,7 @@
 					"behaviors": {
 						"Platform": {
 							"properties": {
-								"max-speed": 180,
+								"max-speed": 90,
 								"acceleration": 1500,
 								"deceleration": 1500,
 								"jump-strength": 650,
@@ -1712,7 +1712,7 @@
 					"behaviors": {
 						"Platform": {
 							"properties": {
-								"max-speed": 180,
+								"max-speed": 90,
 								"acceleration": 1500,
 								"deceleration": 1500,
 								"jump-strength": 650,
@@ -1768,7 +1768,7 @@
 					"behaviors": {
 						"Platform": {
 							"properties": {
-								"max-speed": 180,
+								"max-speed": 90,
 								"acceleration": 1500,
 								"deceleration": 1500,
 								"jump-strength": 650,
@@ -2495,6 +2495,90 @@
 						"height": 43.15357305649968,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "EnemiesRemainText",
+					"properties": {
+						"text": "Text",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 60,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 32.31065122145503,
+						"y": 2.6125473858961072,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text",
+					"properties": {
+						"text": "Text",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 61,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 375.1823573686965,
+						"y": 193.2610785472241,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
