@@ -146,6 +146,30 @@
 					"parameters": {
 						"text": "\"\""
 					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 270699801565110,
+					"parameters": {
+						"seconds": "1"
+					}
+				},
+				{
+					"id": "set-animation-speed",
+					"objectClass": "AmmoUI",
+					"sid": 305774523058234,
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "AmmoUI",
+					"sid": 174424411449007,
+					"parameters": {
+						"frame-number": "Ammo"
+					}
 				}
 			],
 			"sid": 571677459351833
@@ -183,6 +207,23 @@
 						"layer": "1",
 						"image-point": "0",
 						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 853203044815129,
+					"parameters": {
+						"variable": "Ammo",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "AmmoUI",
+					"sid": 459834711400474,
+					"parameters": {
+						"frame-number": "Ammo"
 					}
 				}
 			],
@@ -376,15 +417,6 @@
 					"sid": 115339140893493
 				},
 				{
-					"id": "subtract-from-eventvar",
-					"objectClass": "System",
-					"sid": 853203044815129,
-					"parameters": {
-						"variable": "Ammo",
-						"value": "1"
-					}
-				},
-				{
 					"id": "set-text",
 					"objectClass": "ammocount",
 					"sid": 792935663601989,
@@ -421,6 +453,14 @@
 					"parameters": {
 						"variable": "Ammo",
 						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "AmmoUI",
+					"sid": 305681879699280,
+					"parameters": {
+						"frame-number": "Ammo"
 					}
 				},
 				{
@@ -640,15 +680,6 @@
 				{
 					"id": "subtract-from-eventvar",
 					"objectClass": "System",
-					"sid": 853203044815129,
-					"parameters": {
-						"variable": "Ammo",
-						"value": "1"
-					}
-				},
-				{
-					"id": "subtract-from-eventvar",
-					"objectClass": "System",
 					"sid": 162529737099959,
 					"parameters": {
 						"variable": "EnemiesRemaining",
@@ -727,15 +758,6 @@
 					"id": "destroy",
 					"objectClass": "bullet",
 					"sid": 202620001939815
-				},
-				{
-					"id": "subtract-from-eventvar",
-					"objectClass": "System",
-					"sid": 820093157703432,
-					"parameters": {
-						"variable": "Ammo",
-						"value": "1"
-					}
 				},
 				{
 					"id": "subtract-from-eventvar",
@@ -839,15 +861,6 @@
 					"id": "destroy",
 					"objectClass": "bullet",
 					"sid": 276986645221626
-				},
-				{
-					"id": "subtract-from-eventvar",
-					"objectClass": "System",
-					"sid": 545393338182083,
-					"parameters": {
-						"variable": "Ammo",
-						"value": "1"
-					}
 				},
 				{
 					"id": "subtract-from-eventvar",

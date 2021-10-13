@@ -131,7 +131,8 @@
 			"enemydeathSlimes",
 			"Sprite",
 			"EnemiesRemainText",
-			"Text"
+			"Text",
+			"AmmoUI"
 		],
 		"subfolders": []
 	},
