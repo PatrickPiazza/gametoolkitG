@@ -126,13 +126,15 @@
 			"Spikes",
 			"Sprite3",
 			"bulletpickup",
-			"ammocount",
 			"playerdeath",
 			"enemydeathSlimes",
 			"Sprite",
-			"EnemiesRemainText",
 			"Text",
-			"AmmoUI"
+			"AmmoUI",
+			"EnemyT",
+			"EnemyTN",
+			"CoinUI",
+			"Bar"
 		],
 		"subfolders": []
 	},

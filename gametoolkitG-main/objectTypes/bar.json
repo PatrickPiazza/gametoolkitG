@@ -1,0 +1,63 @@
+{
+	"name": "Bar",
+	"plugin-id": "Sprite",
+	"sid": 439744002713393,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 745918240763310
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1828,
+						"height": 434,
+						"originX": 0.5010940919037199,
+						"originY": 0.5357142857142857,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4302515,
+						"collisionPoly": {
+							"points": [
+								0.05689277899343545,
+								0.07373271889400922,
+								0.5010940919037199,
+								0.002304147465437821,
+								0.9436542669584245,
+								0.07834101382488479,
+								0.9983588621444202,
+								0.5357142857142857,
+								0.9327133479212254,
+								0.9447004608294931,
+								0.5010940919037199,
+								0.9953917050691244,
+								0.06838074398249452,
+								0.9470046082949308,
+								0.0010940919037199124,
+								0.5357142857142857
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 433321734602344,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

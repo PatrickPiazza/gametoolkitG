@@ -1,0 +1,63 @@
+{
+	"name": "EnemyT",
+	"plugin-id": "Sprite",
+	"sid": 459969842819662,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Anchor",
+			"sid": 792309339758280
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 379,
+						"height": 84,
+						"originX": 0.503957783641161,
+						"originY": 0.43452380952380953,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7795939,
+						"collisionPoly": {
+							"points": [
+								0.044854881266490766,
+								0.07142857142857142,
+								0.503957783641161,
+								0.23809523809523808,
+								0.9234828496042217,
+								0.23809523809523808,
+								0.9920844327176781,
+								0.43452380952380953,
+								0.9894459102902374,
+								0.9166666666666666,
+								0.503957783641161,
+								0.9761904761904762,
+								0.018469656992084433,
+								0.9047619047619048,
+								0.002638522427440633,
+								0.43452380952380953
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 691434652108620,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}
