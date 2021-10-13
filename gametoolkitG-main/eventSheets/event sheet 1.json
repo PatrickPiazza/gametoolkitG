@@ -1118,6 +1118,69 @@
 				}
 			],
 			"sid": 520908753011820
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Goal, also Hi",
+			"description": "If you reading this, Have a good day!",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 697368113532250,
+							"parameters": {
+								"first-value": "EnemiesRemaining",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "portalSpawner",
+							"sid": 731099358693846,
+							"parameters": {
+								"object": "portal",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 821212051001691
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 258513083298576,
+							"parameters": {
+								"object": "portal"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-nextprevious-layout",
+							"objectClass": "System",
+							"sid": 846620338457361,
+							"parameters": {
+								"which": "next"
+							}
+						}
+					],
+					"sid": 822449147266365
+				}
+			],
+			"sid": 616519550630961
 		}
 	],
 	"sid": 637324966410906
