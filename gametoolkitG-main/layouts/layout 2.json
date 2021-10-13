@@ -155,9 +155,9 @@
 						},
 						"Platform": {
 							"properties": {
-								"max-speed": 330,
-								"acceleration": 1500,
-								"deceleration": 1500,
+								"max-speed": 240,
+								"acceleration": 9001,
+								"deceleration": 9001,
 								"jump-strength": 580,
 								"gravity": 1500,
 								"max-fall-speed": 1000,

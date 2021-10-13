@@ -304,7 +304,7 @@
 		"orientations": "landscape",
 		"gpuPreference": "high-performance",
 		"scriptsType": "module",
-		"framerateMode": "vsync",
+		"framerateMode": "unlimited-tick",
 		"compositingMode": "standard",
 		"sampling": "trilinear",
 		"downscaling": "medium",
