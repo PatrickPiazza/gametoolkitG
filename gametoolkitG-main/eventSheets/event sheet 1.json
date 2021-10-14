@@ -759,11 +759,6 @@
 					"parameters": {
 						"seconds": "2.0"
 					}
-				},
-				{
-					"id": "restart-layout",
-					"objectClass": "System",
-					"sid": 794385395575841
 				}
 			],
 			"sid": 556894048158751
@@ -854,14 +849,10 @@
 					"parameters": {
 						"seconds": "2.0"
 					}
-				},
-				{
-					"id": "restart-layout",
-					"objectClass": "System",
-					"sid": 971454688135117
 				}
 			],
-			"sid": 950202275497070
+			"sid": 950202275497070,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
