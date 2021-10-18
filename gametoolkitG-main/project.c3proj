@@ -193,6 +193,21 @@
 					"name": "Squish.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 340989234373922
+				},
+				{
+					"name": "Pick Up.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 649204509718954
+				},
+				{
+					"name": "Coin.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 581306494037324
+				},
+				{
+					"name": "Win.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 811536836261489
 				}
 			],
 			"subfolders": []

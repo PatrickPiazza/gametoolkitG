@@ -371,6 +371,17 @@
 					"sid": 598323705203279
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 621219214649593,
+					"parameters": {
+						"audio-file": "Coin",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
 					"sid": 105127204722655,
@@ -429,6 +440,17 @@
 					"id": "destroy",
 					"objectClass": "bulletpickup",
 					"sid": 666488824408125
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 353174022093388,
+					"parameters": {
+						"audio-file": "Pick Up",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
 				},
 				{
 					"id": "add-to-eventvar",
@@ -772,6 +794,17 @@
 					"sid": 273043594805091,
 					"parameters": {
 						"text": "\"Clear!\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 459011343641418,
+					"parameters": {
+						"audio-file": "Win",
+						"loop": "not-looping",
+						"volume": "-5",
+						"tag-optional": "\"\""
 					}
 				},
 				{
