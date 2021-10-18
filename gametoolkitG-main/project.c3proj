@@ -47,6 +47,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r260",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -136,7 +144,8 @@
 			"CoinUI",
 			"Bar",
 			"portal",
-			"portalSpawner"
+			"portalSpawner",
+			"Audio"
 		],
 		"subfolders": [
 			{
@@ -179,7 +188,13 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "Squish.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 340989234373922
+				}
+			],
 			"subfolders": []
 		},
 		"music": {

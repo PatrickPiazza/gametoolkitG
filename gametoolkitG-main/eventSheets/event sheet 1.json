@@ -644,6 +644,17 @@
 					}
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 371730478233858,
+					"parameters": {
+						"audio-file": "Squish",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "destroy",
 					"objectClass": "Enemy",
 					"sid": 498604265291370
@@ -715,6 +726,17 @@
 						"layer": "1",
 						"image-point": "0",
 						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 701029060869746,
+					"parameters": {
+						"audio-file": "Squish",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
 					}
 				},
 				{
@@ -1087,6 +1109,17 @@
 						"layer": "1",
 						"image-point": "0",
 						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 804808744413809,
+					"parameters": {
+						"audio-file": "Squish",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
 					}
 				},
 				{

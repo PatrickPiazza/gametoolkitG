@@ -1,7 +1,7 @@
 {
 	"name": "Audio",
 	"plugin-id": "Audio",
-	"sid": 620159373354707,
+	"sid": 109221708501466,
 	"singleglobal-inst": {
 		"type": "Audio",
 		"properties": {
@@ -16,6 +16,6 @@
 			"maximum-distance": 10000,
 			"roll-off-factor": 1
 		},
-		"uid": 47
+		"uid": 15
 	}
 }
