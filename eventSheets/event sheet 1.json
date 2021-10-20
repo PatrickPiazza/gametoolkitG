@@ -1,0 +1,1244 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Ammo",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "player ammo count. if 0 or lower, player's shots are more melee range",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 623315271515767
+		},
+		{
+			"eventType": "variable",
+			"name": "coincounter",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "self explanatory ",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 470943482244806
+		},
+		{
+			"eventType": "variable",
+			"name": "EnemiesRemaining",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 410344690851327
+		},
+		{
+			"eventType": "variable",
+			"name": "PerfectCoinCount",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 415136336652161
+		},
+		{
+			"eventType": "variable",
+			"name": "Pickupamount",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 101841587817548
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 420139024280866
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cycle-position",
+					"objectClass": "pickups",
+					"sid": 703880436276121,
+					"behaviorType": "Sine",
+					"parameters": {
+						"cycle-position": "(Self.X % 128)/128"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 508991520071766,
+					"parameters": {
+						"variable": "EnemiesRemaining",
+						"value": "Enemy.Count"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 946305700216782,
+					"parameters": {
+						"variable": "PerfectCoinCount",
+						"value": "coin.Count"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 373548348339296,
+					"parameters": {
+						"variable": "Ammo",
+						"value": "5"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 958050793347982,
+					"parameters": {
+						"variable": "coincounter",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 216091606258172,
+					"parameters": {
+						"variable": "Pickupamount",
+						"value": "bulletpickup.Count"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "EnemyTN",
+					"sid": 916292994128941,
+					"parameters": {
+						"frame-number": "EnemiesRemaining"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "CoinScore1",
+					"sid": 240834980276468,
+					"parameters": {
+						"text": "coincounter & \" / \" & PerfectCoinCount"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 128907838764048,
+					"parameters": {
+						"text": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 270699801565110,
+					"parameters": {
+						"seconds": "1"
+					}
+				},
+				{
+					"id": "set-animation-speed",
+					"objectClass": "AmmoUI",
+					"sid": 305774523058234,
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "AmmoUI",
+					"sid": 174424411449007,
+					"parameters": {
+						"frame-number": "Ammo"
+					}
+				}
+			],
+			"sid": 571677459351833
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 695566830239413,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 226616663478109,
+					"parameters": {
+						"variable": "Ammo",
+						"comparison": 3,
+						"value": "0"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Player",
+					"sid": 688784995833834,
+					"parameters": {
+						"object": "bullet",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 853203044815129,
+					"parameters": {
+						"variable": "Ammo",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "AmmoUI",
+					"sid": 459834711400474,
+					"parameters": {
+						"frame-number": "Ammo"
+					}
+				}
+			],
+			"sid": 494225367639717
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 514269144980851,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 420472979304059,
+					"parameters": {
+						"variable": "Ammo",
+						"comparison": 2,
+						"value": "EnemiesRemaining"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 121649286610305,
+					"parameters": {
+						"variable": "Pickupamount",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dying",
+					"sid": 621721795104099
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 384330572934253,
+					"parameters": {
+						"text": "\"Insufficient ammo!\""
+					}
+				}
+			],
+			"sid": 175512336805319
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 477632036125759,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Player",
+					"sid": 653770829819124,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 873482607352067
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 321701510328814,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Player",
+					"sid": 228454315785468,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 586545609824943
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "bullet",
+					"sid": 985718862383816
+				}
+			],
+			"actions": [],
+			"sid": 733457658762211,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "Player",
+							"sid": 904527449657608
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "bullet",
+							"sid": 865953930372194,
+							"parameters": {
+								"angle": "180"
+							}
+						}
+					],
+					"sid": 572697449276093
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 457490921094453,
+					"parameters": {
+						"object": "coin"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "coin",
+					"sid": 598323705203279
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 621219214649593,
+					"parameters": {
+						"audio-file": "Coin",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 105127204722655,
+					"parameters": {
+						"variable": "coincounter",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "CoinScore1",
+					"sid": 472444115669299,
+					"parameters": {
+						"text": "coincounter & \" / \" & PerfectCoinCount"
+					}
+				}
+			],
+			"sid": 482206717454352
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bullet",
+					"sid": 443770568116742,
+					"parameters": {
+						"object": "platforms"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 115339140893493
+				}
+			],
+			"sid": 585979994756613,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 263467505645509,
+					"parameters": {
+						"object": "bulletpickup"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "bulletpickup",
+					"sid": 666488824408125
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 353174022093388,
+					"parameters": {
+						"audio-file": "Pick Up",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 128987212690991,
+					"parameters": {
+						"variable": "Ammo",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "AmmoUI",
+					"sid": 305681879699280,
+					"parameters": {
+						"frame-number": "Ammo"
+					}
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 500206028164034,
+					"parameters": {
+						"variable": "Pickupamount",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 321010184866163
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemy",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "E_LOS",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "has-los-to-object",
+									"objectClass": "Enemy",
+									"sid": 885568440176781,
+									"behaviorType": "LineOfSight",
+									"parameters": {
+										"object": "Player",
+										"image-point": "0"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Enemy",
+									"sid": 777976587595824,
+									"parameters": {
+										"instance-variable": "Active"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Enemy",
+									"sid": 540277265343194,
+									"parameters": {
+										"instance-variable": "Active",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-cone-of-view",
+									"objectClass": "Enemy",
+									"sid": 904037904333097,
+									"behaviorType": "LineOfSight",
+									"parameters": {
+										"cone-of-view": "360"
+									}
+								}
+							],
+							"sid": 614503893320578
+						}
+					],
+					"sid": 838616126226382
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 546076634438870
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Enemy",
+							"sid": 911264044889824,
+							"parameters": {
+								"instance-variable": "distance",
+								"value": "distance(Enemy.X,Enemy.X, Player.X,Player.X)"
+							}
+						}
+					],
+					"sid": 945275784224936
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "Enemy",
+							"sid": 329216257057477,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "Player",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 764959135860190
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Enemy",
+							"sid": 976755475861788,
+							"parameters": {
+								"instance-variable": "distance",
+								"comparison": 5,
+								"value": "30"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 413181210964990
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Enemy",
+							"sid": 823791026554412,
+							"parameters": {
+								"comparison": 4,
+								"x-co-ordinate": "Enemy.X"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 273906570295767
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 345757802011514
+						}
+					],
+					"actions": [],
+					"sid": 869669483492859
+				}
+			],
+			"sid": 573049953613920
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bullet",
+					"sid": 147817492887716,
+					"parameters": {
+						"object": "Enemy"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 106540038486592,
+					"parameters": {
+						"variable": "EnemiesRemaining",
+						"comparison": 3,
+						"value": "1"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Enemy",
+					"sid": 153711174175947,
+					"parameters": {
+						"object": "enemydeathSlimes",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 371730478233858,
+					"parameters": {
+						"audio-file": "Squish",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Enemy",
+					"sid": 498604265291370
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 816123539087815
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 162529737099959,
+					"parameters": {
+						"variable": "EnemiesRemaining",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "EnemyTN",
+					"sid": 509591466110083,
+					"parameters": {
+						"frame-number": "EnemiesRemaining"
+					}
+				}
+			],
+			"sid": 190049642683668
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bullet",
+					"sid": 584934696532780,
+					"parameters": {
+						"object": "Enemy"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 146339000038512,
+					"parameters": {
+						"variable": "EnemiesRemaining",
+						"comparison": 3,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 281592999216931,
+					"parameters": {
+						"variable": "coincounter",
+						"comparison": 2,
+						"value": "PerfectCoinCount"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Enemy",
+					"sid": 617760834489748,
+					"parameters": {
+						"object": "enemydeathSlimes",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 701029060869746,
+					"parameters": {
+						"audio-file": "Squish",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Enemy",
+					"sid": 910053826688160
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 202620001939815
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 702608023435251,
+					"parameters": {
+						"variable": "EnemiesRemaining",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "EnemyTN",
+					"sid": 772039304291599,
+					"parameters": {
+						"frame-number": "EnemiesRemaining"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 273043594805091,
+					"parameters": {
+						"text": "\"Clear!\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 459011343641418,
+					"parameters": {
+						"audio-file": "Win",
+						"loop": "not-looping",
+						"volume": "-5",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 147942243139661,
+					"parameters": {
+						"seconds": "2.0"
+					}
+				}
+			],
+			"sid": 556894048158751
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bullet",
+					"sid": 822621946808887,
+					"parameters": {
+						"object": "Enemy"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 995233423016570,
+					"parameters": {
+						"variable": "EnemiesRemaining",
+						"comparison": 3,
+						"value": "1"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 597597634118787,
+					"parameters": {
+						"variable": "coincounter",
+						"comparison": 5,
+						"value": "PerfectCoinCount"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Enemy",
+					"sid": 675758069746820,
+					"parameters": {
+						"object": "enemydeathSlimes",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Enemy",
+					"sid": 101299711595565
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 276986645221626
+				},
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 958792075539136,
+					"parameters": {
+						"variable": "EnemiesRemaining",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "EnemyTN",
+					"sid": 849577287745086,
+					"parameters": {
+						"frame-number": "EnemiesRemaining"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 347832891675964,
+					"parameters": {
+						"text": "\"Perfect!!\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 306008849402962,
+					"parameters": {
+						"seconds": "2.0"
+					}
+				}
+			],
+			"sid": 950202275497070,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Enemy",
+					"sid": 305318994209804,
+					"parameters": {
+						"instance-variable": "direction"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Enemy",
+					"sid": 317028714829897,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 246552253714288
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Enemy",
+					"sid": 871413911022395,
+					"parameters": {
+						"instance-variable": "direction"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Enemy",
+					"sid": 315119526671672,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 998473638770232
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Enemy",
+					"sid": 111699069773370,
+					"parameters": {
+						"object": "Sprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "toggle-boolean-instvar",
+					"objectClass": "Enemy",
+					"sid": 315189917571707,
+					"parameters": {
+						"instance-variable": "direction"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 108302012695462,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				}
+			],
+			"sid": 140346981897476,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "Enemy",
+							"sid": 172556466146312
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Enemy",
+							"sid": 575937043198755,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 752366028010604
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 628028571135540
+						},
+						{
+							"id": "is-mirrored",
+							"objectClass": "Enemy",
+							"sid": 342545781240268,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Enemy",
+							"sid": 105912287407056,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 521057663323793
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Enemy",
+					"sid": 247886401126148,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dying",
+					"sid": 589793789255511
+				}
+			],
+			"sid": 261485096569201
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 217341393783528
+				}
+			],
+			"actions": [
+				{
+					"id": "set-width",
+					"objectClass": "healthbar",
+					"sid": 109973147436623,
+					"parameters": {
+						"width": "Player.health * 64"
+					}
+				}
+			],
+			"sid": 313130341786586
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Spikes",
+					"sid": 577438831069077,
+					"parameters": {
+						"object": "Player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dying",
+					"sid": 112720269229018
+				}
+			],
+			"sid": 319029376471337
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 304058628517245,
+					"parameters": {
+						"object": "Sprite3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "dying",
+					"sid": 847827458445609
+				}
+			],
+			"sid": 944235334702440
+		},
+		{
+			"functionName": "dying",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Player",
+					"sid": 614130565307090,
+					"parameters": {
+						"object": "playerdeath",
+						"layer": "1",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 804808744413809,
+					"parameters": {
+						"audio-file": "Squish",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Player",
+					"sid": 610282645153020
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 625785215079324,
+					"parameters": {
+						"seconds": "1.5"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 733484159315520
+				}
+			],
+			"sid": 520908753011820
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Goal, also Hi",
+			"description": "If you reading this, Have a good day!",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 697368113532250,
+							"parameters": {
+								"first-value": "EnemiesRemaining",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "portalSpawner",
+							"sid": 731099358693846,
+							"parameters": {
+								"object": "portal",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 821212051001691
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 258513083298576,
+							"parameters": {
+								"object": "portal"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-nextprevious-layout",
+							"objectClass": "System",
+							"sid": 846620338457361,
+							"parameters": {
+								"which": "next"
+							}
+						}
+					],
+					"sid": 822449147266365
+				}
+			],
+			"sid": 616519550630961
+		}
+	],
+	"sid": 637324966410906
+}
