@@ -85,6 +85,7 @@
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
+			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
@@ -180,8 +181,8 @@
 						}
 					},
 					"world": {
-						"x": 88,
-						"y": 426,
+						"x": 1380,
+						"y": 387,
 						"width": 40.90084033613446,
 						"height": 29.508081632653063,
 						"originX": 0.5,
@@ -1547,7 +1548,7 @@
 					"world": {
 						"x": 1125.0001756369259,
 						"y": 236.00171171981933,
-						"width": 152.99894705590563,
+						"width": 160.99899093864954,
 						"height": 18.999824469987544,
 						"originX": 0,
 						"originY": 0,
@@ -1714,7 +1715,7 @@
 					"world": {
 						"x": 878.5,
 						"y": 484,
-						"width": 70.99942992983021,
+						"width": 82.99947380872138,
 						"height": 21.00052671525151,
 						"originX": 0,
 						"originY": 0,
@@ -1741,8 +1742,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1119,
-						"y": 217,
+						"x": 1115,
+						"y": 210,
 						"width": 61.25349677722295,
 						"height": 99.54235133682613,
 						"originX": 0.5,
@@ -1770,8 +1771,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1276,
-						"y": 213,
+						"x": 1291,
+						"y": 214,
 						"width": 58.25349677722295,
 						"height": 94.54235133682613,
 						"originX": 0.5,
@@ -2311,9 +2312,9 @@
 						}
 					},
 					"world": {
-						"x": 1543.9998684037805,
-						"y": 248.00171173330392,
-						"width": 105.99724877221061,
+						"x": 1524.9860294863865,
+						"y": 247.95753125652885,
+						"width": 125.01113901832116,
 						"height": 21.00052671525151,
 						"originX": 0,
 						"originY": 0,
@@ -2398,8 +2399,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1538,
-						"y": 218,
+						"x": 1521,
+						"y": 225,
 						"width": 39.25349677722295,
 						"height": 94.54235133682613,
 						"originX": 0.5,
@@ -2427,8 +2428,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1648,
-						"y": 222,
+						"x": 1633,
+						"y": 235,
 						"width": 39.25349677722295,
 						"height": 94.54235133682613,
 						"originX": 0.5,
@@ -2513,8 +2514,8 @@
 						}
 					},
 					"world": {
-						"x": 725,
-						"y": 64,
+						"x": 729,
+						"y": 190,
 						"width": 21.488,
 						"height": 21.136,
 						"originX": 0.5,
@@ -2876,8 +2877,8 @@
 						}
 					},
 					"world": {
-						"x": 1587,
-						"y": 193,
+						"x": 1591,
+						"y": 195,
 						"width": 21.488,
 						"height": 21.136,
 						"originX": 0.5,
@@ -3305,9 +3306,9 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1650,
-						"y": 85,
-						"width": 39.25349677722295,
+						"x": 1646,
+						"y": 97,
+						"width": 51.25349677722295,
 						"height": 94.54235133682613,
 						"originX": 0.5,
 						"originY": 0.5,
@@ -3334,8 +3335,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1415,
-						"y": 85,
+						"x": 1423,
+						"y": 86,
 						"width": 39.25349677722295,
 						"height": 94.54235133682613,
 						"originX": 0.5,
@@ -3363,8 +3364,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1118,
-						"y": 433,
+						"x": 1136,
+						"y": 458,
 						"width": 39.25349677722295,
 						"height": 94.54235133682613,
 						"originX": 0.5,
@@ -3392,8 +3393,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1289,
-						"y": 435,
+						"x": 1285,
+						"y": 463,
 						"width": 39.25349677722295,
 						"height": 94.54235133682613,
 						"originX": 0.5,
@@ -3421,8 +3422,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 928,
-						"y": 447,
+						"x": 943,
+						"y": 452,
 						"width": 39.25349677722295,
 						"height": 94.54235133682613,
 						"originX": 0.5,
@@ -3798,8 +3799,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1560,
-						"y": 141,
+						"x": 1474,
+						"y": 142,
 						"width": 52.27054632330758,
 						"height": 10.152572313778352,
 						"originX": 0.5487179487179488,
@@ -3856,10 +3857,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 1612,
-						"y": 142,
-						"width": 52.27054632330758,
-						"height": 10.152572313778352,
+						"x": 1633,
+						"y": 202,
+						"width": 51.271294919374924,
+						"height": 11.153320349868666,
 						"originX": 0.5487179487179488,
 						"originY": 0.44680851063829785,
 						"color": [
@@ -3868,7 +3869,7 @@
 							1,
 							1
 						],
-						"angle": 0.00074831614867122,
+						"angle": 1.6010644918298313,
 						"zElevation": 0
 					}
 				},
@@ -4804,8 +4805,8 @@
 						}
 					},
 					"world": {
-						"x": 1590,
-						"y": 215,
+						"x": 1583,
+						"y": 223,
 						"width": 47.2952380952381,
 						"height": 49.35028248587571,
 						"originX": 0.5,
@@ -4817,6 +4818,126 @@
 							1
 						],
 						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "platforms",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 23,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 1509,
+						"y": 243,
+						"width": 19.999298307604505,
+						"height": 16.994513727536983,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.283141416730176,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "platforms",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 16,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 1278,
+						"y": 233,
+						"width": 19.999298307604505,
+						"height": 16.994513727536983,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.283141416730176,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "platforms",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 17,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 1110,
+						"y": 233,
+						"width": 19.999298307604505,
+						"height": 16.994513727536983,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.283141416730176,
 						"zElevation": 0
 					}
 				}
@@ -4842,6 +4963,7 @@
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
+			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
@@ -5200,6 +5322,7 @@
 			"scaleRate": 1,
 			"forceOwnTexture": false,
 			"renderingMode": "3d",
+			"drawOrder": "z-order",
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
@@ -5214,5 +5337,6 @@
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,
+	"projection": "perspective",
 	"eventSheet": "Event sheet 1"
 }

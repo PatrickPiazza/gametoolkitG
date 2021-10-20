@@ -1,0 +1,37 @@
+{
+	"name": "preview_abstractcolorfulclouds_UQaQstL",
+	"plugin-id": "Sprite",
+	"sid": 705480014115905,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 804,
+						"height": 452,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7043601,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 587637411226006,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
