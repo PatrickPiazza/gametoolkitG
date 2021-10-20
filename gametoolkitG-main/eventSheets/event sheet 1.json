@@ -906,8 +906,7 @@
 					}
 				}
 			],
-			"sid": 950202275497070,
-			"disabled": true
+			"sid": 950202275497070
 		},
 		{
 			"eventType": "block",
@@ -984,7 +983,7 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 108302012695462,
+					"sid": 370872895963454,
 					"parameters": {
 						"seconds": "0.1"
 					}
@@ -1232,12 +1231,83 @@
 							"parameters": {
 								"which": "next"
 							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 437225615185838,
+							"parameters": {
+								"tag": "\"\"",
+								"db": "-100",
+								"duration": "3",
+								"ending": "stop"
+							}
+						},
+						{
+							"id": "stop-all",
+							"objectClass": "Audio",
+							"sid": 945214905391127
 						}
 					],
 					"sid": 822449147266365
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 805657134161219,
+							"parameters": {
+								"key": 82
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 468698188865345
+						}
+					],
+					"sid": 335077839230068
 				}
 			],
 			"sid": 616519550630961
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "StageMusic",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 437822919234765
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 502531959035337,
+							"parameters": {
+								"audio-file": "Lobo Loco - Old River Boat (ID 1368)",
+								"loop": "looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 505123974477492
+				}
+			],
+			"sid": 803036437168425
 		}
 	],
 	"sid": 637324966410906
