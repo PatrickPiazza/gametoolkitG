@@ -1,14 +1,14 @@
 {
-	"name": "platforms",
+	"name": "platforms2",
 	"plugin-id": "TiledBg",
-	"sid": 553727199129295,
+	"sid": 253747907573577,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",
 			"name": "Solid",
-			"sid": 536497933580660
+			"sid": 232665181236404
 		}
 	],
 	"effectTypes": [],
@@ -20,7 +20,7 @@
 		"originalSource": "",
 		"exportFormat": "png",
 		"exportQuality": 0.8,
-		"imageSpriteId": 7364664,
+		"imageSpriteId": 7540739,
 		"useCollisionPoly": true
 	}
 }
